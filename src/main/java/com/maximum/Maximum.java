@@ -26,4 +26,15 @@ public class Maximum {
         }
         return max;
     }
+
+    public String maxString(String i, String j, String k){
+        String max = i;
+        if(j.compareTo(max)>0){
+            max=j;
+        }
+        if(k.compareTo(max)>0){
+            max=k;
+        }
+        return max;
+    }
 }

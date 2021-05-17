@@ -43,4 +43,23 @@ public class MaximumTest {
         Float maxNo =  max.maxFloat(1268.4f,951.6f,2587.3f);
         Assertions.assertEquals(2587.3f,maxNo);
     }
+
+    //Test cases for String
+    @Test
+    public void firstStringIsMax(){
+        String maxString =  max.maxString("Zebra","Banana","Mango");
+        Assertions.assertEquals("Zebra",maxString);
+    }
+
+    @Test
+    public void secondStringIsMax(){
+        String maxString =  max.maxString("Banana","Zebra","Mango");
+        Assertions.assertEquals("Zebra",maxString);
+    }
+
+    @Test
+    public void thirdStringIsMax(){
+        String maxString =  max.maxString("Banana","Mango","Zebra");
+        Assertions.assertEquals("Zebra",maxString);
+    }
 }
