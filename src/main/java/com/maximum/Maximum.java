@@ -19,6 +19,9 @@ public class Maximum <S extends Comparable<S>>{
         new Maximum("Batman","IronMan","Thor","Spiderman","Shaktiman").testMaximum();
     }
 
+    public static <S> void printMax(S max){
+        System.out.println("Maximum is "+max);
+    }
     public static <S extends Comparable<S>> S testMaximum(S i, S j, S k,S l, S m){
         S max = i;
         if(j.compareTo(max)>0){
@@ -33,6 +36,7 @@ public class Maximum <S extends Comparable<S>>{
         if(m.compareTo(max)>0){
             max=m;
         }
+        printMax(max);
         return max;
     }
 
