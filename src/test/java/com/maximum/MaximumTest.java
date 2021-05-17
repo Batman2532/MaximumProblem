@@ -6,21 +6,41 @@ import org.junit.jupiter.api.Test;
 public class MaximumTest {
     Maximum max = new Maximum();
 
+    //Test cases for Integer type
     @Test
-    public void firstNumberIsMax(){
-      Integer maxNo =  max.findMax(9,5,3);
+    public void firstNumberIsMaxInteger(){
+      Integer maxNo =  max.maxInteger(9,5,3);
         Assertions.assertEquals(9,maxNo);
     }
 
     @Test
-    public void secondNumberIsMax(){
-        Integer maxNo =  max.findMax(9,12,3);
+    public void secondNumberIsMaxInteger(){
+        Integer maxNo =  max.maxInteger(9,12,3);
         Assertions.assertEquals(12,maxNo);
     }
 
     @Test
-    public void thirdNumberIsMax(){
-        Integer maxNo =  max.findMax(9,5,11);
+    public void thirdNumberIsMaxInteger(){
+        Integer maxNo =  max.maxInteger(9,5,11);
         Assertions.assertEquals(11,maxNo);
+    }
+
+    //Test cases for Float type
+    @Test
+    public void firstNumberIsMaxFloat(){
+        Float maxNo =  max.maxFloat(2873.5f,1873.8f,964.7f);
+        Assertions.assertEquals(2873.5f,maxNo);
+    }
+
+    @Test
+    public void secondNumberIsMaxFloat(){
+        Float maxNo =  max.maxFloat(946.5f,2589.5f,1598.5f);
+        Assertions.assertEquals(2589.5f,maxNo);
+    }
+
+    @Test
+    public void thirdNumberIsMaxFloat(){
+        Float maxNo =  max.maxFloat(1268.4f,951.6f,2587.3f);
+        Assertions.assertEquals(2587.3f,maxNo);
     }
 }
